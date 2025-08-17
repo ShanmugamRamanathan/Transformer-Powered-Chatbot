@@ -6,3 +6,5 @@ gradio
 requests
 sentence-transformers
 faiss-cpu
+streamlit
+PyPDF2

@@ -6,7 +6,7 @@ import pickle
 # Load chunks from previous step
 from chunk_document import load_text, chunk_text
 
-def build_index(chunks, model_name="all-MiniLM-L6-v2"):
+def build_index(chunks, model_name="all-mpnet-base-v2"):
     model = SentenceTransformer(model_name)
     embeddings = model.encode(chunks)
 

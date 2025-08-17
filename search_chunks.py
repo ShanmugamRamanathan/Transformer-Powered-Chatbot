@@ -9,7 +9,7 @@ def load_index(index_path="faiss.index", chunks_path="chunks.pkl"):
         chunks = pickle.load(f)
     return index, chunks
 
-def search(query, index, chunks, model_name="all-MiniLM-L6-v2", top_k=3):
+def search(query, index, chunks, model_name="all-mpnet-base-v2", top_k=3):
     model = SentenceTransformer(model_name)
     query_vec = model.encode([query])
     D, I = index.search(query_vec, top_k)
